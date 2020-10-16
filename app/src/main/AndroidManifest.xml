@@ -9,12 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Register"></activity>
+        <activity android:name=".CustomerDetails"></activity>
+        <activity android:name=".Register" />
         <activity android:name=".loginActivity" />
         <activity android:name=".ShoppingCart" />
         <activity android:name=".UpdateShoppingCart" />
         <activity android:name=".NewArrivals" />
-        <activity android:name=".SignUp"></activity>
+        <activity android:name=".SignUp" />
 
         <activity android:name=".customerHome">
             <intent-filter>
@@ -22,7 +23,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data

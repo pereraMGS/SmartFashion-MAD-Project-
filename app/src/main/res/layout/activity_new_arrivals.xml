@@ -173,49 +173,11 @@
         app:srcCompat="@drawable/man2" />
 
     <TextView
-        android:id="@+id/newMclothPrice1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:text="@string/newMclothPrice1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newMCloth1" />
-
-    <TextView
-        android:id="@+id/newWclothPrice2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="63dp"
-        android:text="@string/newMclothPrice1"
-        app:layout_constraintStart_toEndOf="@+id/newWclothPrice1"
-        app:layout_constraintTop_toBottomOf="@+id/newWCloth2" />
-
-    <TextView
-        android:id="@+id/newWclothPrice3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
-        app:layout_constraintStart_toEndOf="@+id/newWclothPrice2"
-        app:layout_constraintTop_toBottomOf="@+id/newWCloth3" />
-
-    <TextView
-        android:id="@+id/newWclothPrice4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="47dp"
-        android:layout_marginEnd="35dp"
-        android:contentDescription="@string/newMClothPrice3"
-        android:text="@string/newMclothPrice1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/newWclothPrice3"
-        app:layout_constraintTop_toBottomOf="@+id/newWCloth4" />
-
-    <TextView
         android:id="@+id/WClothLKR1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="19dp"
         android:contentDescription="@string/WClothLKR"
         android:text="@string/WClothLKR"
         app:layout_constraintStart_toStartOf="parent"
@@ -226,35 +188,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="19dp"
         android:contentDescription="@string/WClothLKR"
         android:text="@string/WClothLKR"
         app:layout_constraintStart_toEndOf="@+id/MClothLKR1"
-        app:layout_constraintTop_toBottomOf="@+id/newMclothPrice2" />
+        app:layout_constraintTop_toBottomOf="@+id/newMCloth2" />
 
     <TextView
         android:id="@+id/MClothLKR3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="19dp"
         android:contentDescription="@string/WClothLKR"
         android:text="@string/WClothLKR"
         app:layout_constraintStart_toEndOf="@+id/MClothLKR2"
-        app:layout_constraintTop_toBottomOf="@+id/newMclothPrice3" />
+        app:layout_constraintTop_toBottomOf="@+id/newMCloth3" />
 
     <TextView
         android:id="@+id/MClothLKR4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="19dp"
         android:layout_marginEnd="16dp"
         android:contentDescription="@string/WClothLKR"
         android:text="@string/WClothLKR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/MClothLKR3"
-        app:layout_constraintTop_toBottomOf="@+id/newMclothPrice4" />
+        app:layout_constraintTop_toBottomOf="@+id/newMCloth4" />
 
     <Button
         android:id="@+id/addWCloth1"
@@ -268,7 +230,10 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WClothLKR1" />
+        android:clickable="true"
+        android:onClick="add1"
+        app:layout_constraintTop_toBottomOf="@+id/WClothLKR1"
+        android:focusable="true" />
 
 
     <Button
@@ -282,8 +247,11 @@
         android:textColor="#F8F5F5"
         android:textSize="12sp"
         android:textStyle="bold"
+        android:clickable="true"
+        android:onClick="add2"
         app:layout_constraintStart_toEndOf="@+id/addWCloth1"
-        app:layout_constraintTop_toBottomOf="@+id/WClothLKR2" />
+        app:layout_constraintTop_toBottomOf="@+id/WClothLKR2"
+        android:focusable="true" />
 
     <Button
         android:id="@+id/addWCloth3"
@@ -297,8 +265,11 @@
         android:textColor="#F8F5F5"
         android:textSize="12sp"
         android:textStyle="bold"
+        android:clickable="true"
+        android:onClick="add3"
         app:layout_constraintStart_toEndOf="@+id/addWCloth2"
-        app:layout_constraintTop_toBottomOf="@+id/WClothLKR3" />
+        app:layout_constraintTop_toBottomOf="@+id/WClothLKR3"
+        android:focusable="true" />
 
     <Button
         android:id="@+id/addWCloth4"
@@ -312,79 +283,45 @@
         android:text="@string/addWomencloth2"
         android:textColor="#F8F5F5"
         android:textSize="12sp"
+        android:clickable="true"
+        android:onClick="add4"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/addWCloth3"
-        app:layout_constraintTop_toBottomOf="@+id/WClothLKR4" />
+        app:layout_constraintTop_toBottomOf="@+id/WClothLKR4"
+        android:focusable="true" />
 
-
-    <TextView
-        android:id="@+id/newWclothPrice1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:text="@string/newMclothPrice1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newWCloth1" />
-
-    <TextView
-        android:id="@+id/newMclothPrice2"
-        android:layout_width="41dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="68dp"
-        android:contentDescription="@string/newMclothPrice2"
-        android:text="@string/newMClothPrice2"
-        app:layout_constraintStart_toEndOf="@+id/newMclothPrice1"
-        app:layout_constraintTop_toBottomOf="@+id/newMCloth2" />
-
-    <TextView
-        android:id="@+id/newMclothPrice3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:contentDescription="@string/newMClothPrice4"
-        android:text="@string/newMclothPrice1"
-        app:layout_constraintStart_toEndOf="@+id/newMclothPrice2"
-        app:layout_constraintTop_toBottomOf="@+id/newMCloth3" />
-
-    <TextView
-        android:id="@+id/newMclothPrice4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="35dp"
-        android:contentDescription="@string/newMClothPrice3"
-        android:text="@string/newMclothPrice1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newMCloth4" />
 
     <TextView
         android:id="@+id/MClothLKR1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="19dp"
         android:contentDescription="@string/WClothLKR"
         android:text="@string/WClothLKR"
+        android:clickable="true"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newMclothPrice1" />
+        app:layout_constraintTop_toBottomOf="@+id/newMCloth1"
+        android:focusable="true" />
 
     <TextView
         android:id="@+id/WClothLKR2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="19dp"
         android:contentDescription="@string/WClothLKR"
         android:text="@string/WClothLKR"
         app:layout_constraintStart_toEndOf="@+id/WClothLKR1"
-        app:layout_constraintTop_toBottomOf="@+id/newWclothPrice2" />
+        app:layout_constraintTop_toBottomOf="@+id/newWCloth2" />
 
     <TextView
         android:id="@+id/WClothLKR3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="19dp"
         android:contentDescription="@string/WClothLKR"
         android:text="@string/WClothLKR"
         app:layout_constraintStart_toEndOf="@+id/WClothLKR2"
@@ -395,13 +332,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="19dp"
         android:layout_marginEnd="16dp"
         android:contentDescription="@string/WClothLKR"
         android:text="@string/WClothLKR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/WClothLKR3"
-        app:layout_constraintTop_toBottomOf="@+id/newWclothPrice4" />
+        app:layout_constraintTop_toBottomOf="@+id/newWCloth4" />
 
 
     <Button
@@ -413,10 +350,13 @@
         android:background="#293B9F"
         android:text="@string/addWomenCloth1"
         android:textColor="#F8F5F5"
+        android:clickable="true"
         android:textSize="12sp"
         android:textStyle="bold"
+        android:onClick="add5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MClothLKR1" />
+        app:layout_constraintTop_toBottomOf="@+id/MClothLKR1"
+        android:focusable="true" />
 
     <Button
         android:id="@+id/addMCloth2"
@@ -428,8 +368,11 @@
         android:textColor="#F8F5F5"
         android:textSize="12sp"
         android:textStyle="bold"
+        android:clickable="true"
+        android:onClick="add6"
         app:layout_constraintStart_toEndOf="@+id/addMCloth1"
-        app:layout_constraintTop_toBottomOf="@+id/MClothLKR2" />
+        app:layout_constraintTop_toBottomOf="@+id/MClothLKR2"
+        android:focusable="true" />
 
     <Button
         android:id="@+id/addMCloth3"
@@ -441,9 +384,12 @@
         android:text="@string/addWomencloth2"
         android:textColor="#F8F5F5"
         android:textSize="12sp"
+        android:clickable="true"
+        android:onClick="add7"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/MClothLKR2"
-        app:layout_constraintTop_toBottomOf="@+id/MClothLKR3" />
+        app:layout_constraintTop_toBottomOf="@+id/MClothLKR3"
+        android:focusable="true" />
 
     <Button
         android:id="@+id/addMCloth4"
@@ -453,6 +399,8 @@
         android:layout_marginTop="1dp"
         android:layout_marginEnd="27dp"
         android:background="#293B9F"
+        android:clickable="true"
+        android:onClick="add8"
         android:contentDescription="@string/addWCloth4"
         android:text="@string/addWomencloth2"
         android:textColor="#F8F5F5"
@@ -460,7 +408,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/addMCloth3"
-        app:layout_constraintTop_toBottomOf="@+id/MClothLKR4" />
+        app:layout_constraintTop_toBottomOf="@+id/MClothLKR4"
+        android:focusable="true" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
